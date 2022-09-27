@@ -59,24 +59,6 @@ I had no real problems with this asignment. It helped me understand how to use c
 
 ### Description & Code
 The goal of this assignment was to control a servo using 2 buttons 
-```</span> 
-</pre>
-
-
-```
-
-### Evidence
-
-### Wiring
-
-### Reflection
-
-
-
-
-## CircuitPython_LCD
-
-### Description & Code
 
 ```python
 # SPDX-FileCopyrightText: 2018 Kattni Rembor for Adafruit Industries
@@ -111,6 +93,20 @@ while True:
 
 ### Evidence
 ![ Servo Button Turning](https://im2.ezgif.com/tmp/ezgif-2-aeade87c73.gif)
+
+
+### Wiring
+
+### Reflection
+This assignment was more challenging. At first, I had to get one button to controll the servo and then after add and wire the other one.
+
+
+
+## CircuitPython_LCD
+
+### Description & Code
+
+
 ### Wiring
 
 ### Reflection
