@@ -96,7 +96,7 @@ while True:
 
 
 ### Wiring
-
+![ Servo Button Wiring]()
 ### Reflection
 This assignment was more challenging. At first, I had to get one button to controll the servo and then after add and wire the other one.
 
