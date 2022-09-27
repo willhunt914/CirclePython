@@ -78,7 +78,7 @@ The goal of this assignment was to control a servo using 2 buttons
 
 ### Description & Code
 
-```
+```python
 # SPDX-FileCopyrightText: 2018 Kattni Rembor for Adafruit Industries
 #
 # SPDX-License-Identifier: MIT
