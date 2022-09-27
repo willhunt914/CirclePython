@@ -11,15 +11,36 @@ This repository will actually serve as a aid to help you get started with your o
 ## Hello_CircuitPython
 
 ### Description & Code
-Description goes here
+The goal of this asignment was to make the Led Blink 
 
 Here's how you make code look like code:
 
 ```python
-Code goes here
+import board
+import neopixel
+import time
+
+dot = neopixel.NeoPixel(board.NEOPIXEL, 1)  # attach MetroExpress and led
+dot.brightness = 0.2
+
+print("make it rainbow!")
+
+while True:  # makes the led change colours using colour codes 
+    dot.fill((255, 0, 0))  # red
+    time.sleep(0.5)
+    dot.fill((255, 128, 0))  # orange
+    time.sleep(0.5)
+    dot.fill((255, 255, 0))  # yellow
+    time.sleep(0.5)
+    dot.fill((0, 255, 0))  # green
+    time.sleep(0.5)
+    dot.fill((0, 0, 255))  # blue
+    time.sleep(0.5)
+    dot.fill((255, 0, 255))  # purple
+    time.sleep(0.5)
 
 ```
-
+code  credit goes to [lucy G](https://github.com/lgray52/CircuitPython#evidence)
 
 ### Evidence
 ![rainbow light blinking](https://github.com/lgray52/CircuitPython/blob/main/evidence/hello_circuitpython.gif)
