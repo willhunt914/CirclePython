@@ -92,7 +92,7 @@ while True:
 ```
 
 ### Evidence
-![ Servo Button Turning]([https://im2.ezgif.com/tmp/ezgif-2-aeade87c73.gif](https://im2.ezgif.com/tmp/ezgif-2-585eafa382.gif)
+![ Servo Button Turning](https://im2.ezgif.com/tmp/ezgif-2-585eafa382.gif)
 
 
 ### Wiring
