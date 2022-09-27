@@ -11,9 +11,7 @@ This repository will actually serve as a aid to help you get started with your o
 ## Hello_CircuitPython
 
 ### Description & Code
-The goal of this asignment was to make the Led Blink 
-
-Here's how you make code look like code:
+The goal of this asignment was to make the Led change colors  
 
 ```python
 import board
@@ -51,7 +49,7 @@ Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com
 Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
 
 ### Reflection
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience?  Your ultimate goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person.
+I had no real problems with this asignment. It helped me understand how to use circuitpython and how it worked.
 
 
 
