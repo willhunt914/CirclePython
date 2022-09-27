@@ -59,36 +59,7 @@ I had no real problems with this asignment. It helped me understand how to use c
 
 ### Description & Code
 The goal of this assignment was to control a servo using 2 buttons 
-```python
-
-<pre style="color:#000000;background:#ffffff;"><span style="color:#696969; "># SPDX-FileCopyrightText: 2018 Kattni Rembor for Adafruit Industries</span>
-<span style="color:#696969; ">#</span>
-<span style="color:#696969; "># SPDX-License-Identifier: MIT</span>
-
-<span style="color:#696969; ">"""CircuitPython Essentials Servo standard servo example"""</span>
-<span style="color:#800000; font-weight:bold; ">from</span> curses <span style="color:#800000; font-weight:bold; ">import</span> BUTTON1_PRESSED
-<span style="color:#800000; font-weight:bold; ">import</span> time
-<span style="color:#800000; font-weight:bold; ">from</span> tkinter <span style="color:#800000; font-weight:bold; ">import</span> Button
-<span style="color:#800000; font-weight:bold; ">import</span> board
-<span style="color:#800000; font-weight:bold; ">import</span> pwmio
-<span style="color:#800000; font-weight:bold; ">from</span> adafruit_motor <span style="color:#800000; font-weight:bold; ">import</span> servo
-
-<span style="color:#696969; "># create a PWMOut object on Pin A2.</span>
-pwm <span style="color:#808030; ">=</span> pwmio<span style="color:#808030; ">.</span>PWMOut<span style="color:#808030; ">(</span>board<span style="color:#808030; ">.</span>D2<span style="color:#808030; ">,</span> duty_cycle<span style="color:#808030; ">=</span><span style="color:#008c00; ">2</span> <span style="color:#44aadd; ">**</span> <span style="color:#008c00; ">15</span><span style="color:#808030; ">,</span> frequency<span style="color:#808030; ">=</span><span style="color:#008c00; ">50</span><span style="color:#808030; ">)</span>
-
-<span style="color:#696969; "># Create a servo object, my_servo.</span>
-my_servo <span style="color:#808030; ">=</span> servo<span style="color:#808030; ">.</span>Servo<span style="color:#808030; ">(</span>pwm<span style="color:#808030; ">)</span>
-
-<span style="color:#800000; font-weight:bold; ">while</span> <span style="color:#074726; ">True</span><span style="color:#808030; ">:</span>
-    
-    <span style="color:#800000; font-weight:bold; ">for</span> angle <span style="color:#800000; font-weight:bold; ">in</span> <span style="color:#400000; ">range</span><span style="color:#808030; ">(</span><span style="color:#008c00; ">0</span><span style="color:#808030; ">,</span> <span style="color:#008c00; ">180</span><span style="color:#808030; ">,</span> <span style="color:#008c00; ">5</span><span style="color:#808030; ">)</span><span style="color:#808030; ">:</span>  <span style="color:#696969; "># 0 - 180 degrees, 5 degrees at a time.</span>
-        my_servo<span style="color:#808030; ">.</span>angle <span style="color:#808030; ">=</span> angle 
-        time<span style="color:#808030; ">.</span>sleep<span style="color:#808030; ">(</span><span style="color:#008000; ">0.05</span><span style="color:#808030; ">)</span>
-
-
-    <span style="color:#800000; font-weight:bold; ">for</span> angle <span style="color:#800000; font-weight:bold; ">in</span> <span style="color:#400000; ">range</span><span style="color:#808030; ">(</span><span style="color:#008c00; ">180</span><span style="color:#808030; ">,</span> <span style="color:#008c00; ">0</span><span style="color:#808030; ">,</span> <span style="color:#44aadd; ">-</span><span style="color:#008c00; ">5</span><span style="color:#808030; ">)</span><span style="color:#808030; ">:</span> <span style="color:#696969; "># 180 - 0 degrees, 5 degrees at a time.</span>
-        my_servo<span style="color:#808030; ">.</span>angle <span style="color:#808030; ">=</span> angle
-        time<span style="color:#808030; ">.</span>sleep<span style="color:#808030; ">(</span><span style="color:#008000; ">0.05</span><span style="color:#808030; ">)</span> 
+```</span> 
 </pre>
 
 
@@ -107,9 +78,35 @@ my_servo <span style="color:#808030; ">=</span> servo<span style="color:#808030;
 
 ### Description & Code
 
-```python
-Code goes here
+```
+# SPDX-FileCopyrightText: 2018 Kattni Rembor for Adafruit Industries
+#
+# SPDX-License-Identifier: MIT
 
+"""CircuitPython Essentials Servo standard servo example"""
+from curses import BUTTON1_PRESSED
+import time
+from tkinter import Button
+import board
+import pwmio
+from adafruit_motor import servo
+
+# create a PWMOut object on Pin A2.
+pwm = pwmio.PWMOut(board.D2, duty_cycle=2 ** 15, frequency=50)
+
+# Create a servo object, my_servo.
+my_servo = servo.Servo(pwm)
+
+while True:
+    
+    for angle in range(0, 180, 5):  # 0 - 180 degrees, 5 degrees at a time.
+        my_servo.angle = angle 
+        time.sleep(0.05)
+
+
+    for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time.
+        my_servo.angle = angle
+        time.sleep(0.05) 
 ```
 
 ### Evidence
