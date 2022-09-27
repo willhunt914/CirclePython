@@ -22,8 +22,9 @@ Code goes here
 
 
 ### Evidence
-Pictures / Gifs of your work should go here.  You need to communicate what your thing does.
+![rainbow light blinking](https://github.com/lgray52/CircuitPython/blob/main/evidence/hello_circuitpython.gif)
 
+image credit goes to [lucy G](https://github.com/lgray52/CircuitPython#evidence)
 ### Wiring
 Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
 Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
