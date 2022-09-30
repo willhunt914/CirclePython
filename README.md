@@ -96,18 +96,85 @@ while True:
 
 
 ### Wiring
-![ Servo Button Wiring](file:///C:/Users/whunt29a/Pictures/servobuttoncode.png)
+![servobuttonwiring](https://user-images.githubusercontent.com/71402974/193278017-65c1b453-b385-4bbb-be26-60461b81be42.png)
+
 ### Reflection
 This assignment was more challenging. At first, I had to get one button to controll the servo and then after add and wire the other one.
 
 
 
-## CircuitPython_LCD
-
+## CircuitPython_distancesensor
+Credit of this whole assignment goes to[Gaby D](https://github.com/gdaless20/Circuitpython))
 ### Description & Code
+ The goal of this assignment was to use a ultrasonic sensor to control the built in LED in the Metro m4.
+
+```python
+import time
+import board
+import adafruit_hcsr04
+import neopixel
+import simpleio
+
+sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D5, echo_pin=board.D6)
+dot = neopixel.NeoPixel(board.NEOPIXEL, 10, brightness=0.5)
+
+r = 0
+g = 0
+b = 0
+
+
+while True:
+
+    try:
+        distance = sonar.distance
+        print((distance,))
+
+        if distance < 5:
+            r = 255
+            g = 0
+            b = 0
+        elif distance > 5 and distance < 20:
+            r = simpleio.map_range(distance, 5, 20, 255, 0)
+            b = simpleio.map_range(distance, 5, 20, 0, 255)
+            g = 0
+            r = int(r)
+            g = int(g)
+            b = int(b)
+        elif distance > 20 and distance < 35:
+            r = 0
+            b = simpleio.map_range(distance, 20, 35, 255, 0)
+            g = simpleio.map_range(distance, 20, 35, 0, 255)
+            r = int(r)
+            g = int(g)
+            b = int(b)
+        elif distance > 35:
+            r = 0
+            b = 0
+            g = 255
+            r = int(r)
+            g = int(g)
+            b = int(b)
+        print(r, g, b)
+        time.sleep(0.05)
+
+    except RuntimeError:
+        print("Retrying!")
+        r = 0
+        g = 0
+        b = 255
+        time.sleep(0.1)
+
+    print(r, g, b)
+    dot.fill((r, g, b))
+    time.sleep(0.05)
+```
+
+### Evidence
+![134724959-4f1d69a2-bb28-4c98-8dd7-6bff58e07b80](https://user-images.githubusercontent.com/71402974/193281062-a0f293f0-4dd3-4d89-aa3b-3da11c3ac38b.gif)
 
 
 ### Wiring
+![134725601-72db0fcb-0d50-486c-aff5-9e0ec1772057](https://user-images.githubusercontent.com/71402974/193280921-27e1fb58-eb80-486e-9955-84a4aa6fe4a1.png)
 
 ### Reflection
 
