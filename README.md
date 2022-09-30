@@ -104,7 +104,7 @@ This assignment was more challenging. At first, I had to get one button to contr
 
 
 ## CircuitPython_distancesensor
-Credit of this whole assignment goes to[Gaby D](https://github.com/gdaless20/Circuitpython))
+Credit of this whole assignment goes to [Gaby D](https://github.com/gdaless20/Circuitpython))
 ### Description & Code
  The goal of this assignment was to use a ultrasonic sensor to control the built in LED in the Metro m4.
 
@@ -178,11 +178,11 @@ while True:
 
 ### Reflection
 
+I copied this whole assignment from gaby(thanks) but the only problem I had was I had to move 2 files into my lib folder to get it to work.
 
 
 
-
-## NextAssignment
+## Circuitpython_LCD
 
 ### Description & Code
 
