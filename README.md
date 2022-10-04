@@ -186,6 +186,7 @@ I copied this whole assignment from gaby(thanks) but the only problem I had was 
 
 ### Description & Code
 The goal of this assignment was to display the inputs of a button using the LCD screen.
+ credit goes to [Elias Garcia(https://github.com/egarcia28/CircuitPython)
 ```python
 #Elias Garcia
 #When a button is presses it increses or decreases the count based on the position of a switch
@@ -235,7 +236,10 @@ while True:
 ```
 
 ### Evidence
+![193040969-56204239-2e81-486f-a2e2-43e14046091b](https://user-images.githubusercontent.com/71402974/193838626-7bbb85e5-039f-477c-a859-12f824a63c1b.gif)
 
 ### Wiring
+![193033429-e5198fd6-79fd-4952-a702-64e0c3bba90c](https://user-images.githubusercontent.com/71402974/193838696-c56f5b74-1827-43ed-a351-398749fb5195.png)
 
 ### Reflection
+This assignment was also easy since ELias gave me all the information I needed. The only think that I had to figgure out was how to make an lcd folder and drag the files into it. 
