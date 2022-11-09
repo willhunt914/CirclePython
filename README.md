@@ -268,12 +268,11 @@ while True:
 ```
 
 ### Evidence
+ credit for wiring goes to [Nicholas Bednar](https://github.com/nbednar2929/CircuitPython)
 ![ezgif-2-1aee011b5e](https://user-images.githubusercontent.com/71402974/200867433-fe2f8763-22c7-4f56-9893-d5aa820d0d79.gif)
 
 
 ### Wiring
- credit for wiring goes to [Nicholas Bednar](https://github.com/nbednar2929/CircuitPython)
- 
 ![moter control](https://user-images.githubusercontent.com/71402974/200862994-083d5501-a44c-46cc-9a53-fe3805c9c849.png)
 
 ### Reflection 
