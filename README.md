@@ -5,7 +5,7 @@ This repository will actually serve as a aid to help you get started with your o
 * [Hello_CircuitPython](#Hello_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_LCD](#CircuitPython_LCD)
-* [Moter_Control](#Moter_Control)
+* [Motor_Control](#Motor_Control)
 * 
 ---
 
@@ -246,7 +246,7 @@ while True:
 This assignment was also easy since ELias gave me all the information I needed. The only think that I had to figgure out was how to make an lcd folder and drag the files into it. 
 
 
-## Moter_Control
+## Motor_Control
 
 ### Description & Code
 The goal of this assignment was to use a potentiometer to control the speed of a moter 
