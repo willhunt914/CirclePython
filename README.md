@@ -251,6 +251,8 @@ This assignment was also easy since ELias gave me all the information I needed. 
 ### Description & Code
 The goal of this assignment was to use a potentiometer to control the speed of a moter 
 
+ credit for code goes to [Nicholas Bednar](https://github.com/nbednar2929/CircuitPython)
+
 ```python
 import board 
 #import files
@@ -268,7 +270,6 @@ while True:
 ```
 
 ### Evidence
- credit for wiring goes to [Nicholas Bednar](https://github.com/nbednar2929/CircuitPython)
 ![ezgif-2-1aee011b5e](https://user-images.githubusercontent.com/71402974/200867433-fe2f8763-22c7-4f56-9893-d5aa820d0d79.gif)
 
 
