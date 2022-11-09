@@ -5,7 +5,8 @@ This repository will actually serve as a aid to help you get started with your o
 * [Hello_CircuitPython](#Hello_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_LCD](#CircuitPython_LCD)
-* [NextAssignmentGoesHere](#NextAssignment)
+* [Moter_Control](#Moter_Control)
+* 
 ---
 
 ## Hello_CircuitPython
@@ -243,3 +244,37 @@ while True:
 
 ### Reflection
 This assignment was also easy since ELias gave me all the information I needed. The only think that I had to figgure out was how to make an lcd folder and drag the files into it. 
+
+
+## Moter_Control
+
+### Description & Code
+The goal of this assignment was to use a potentiometer to control the speed of a moter 
+
+```python
+import board 
+#import files
+import time
+from analogio import AnalogOut, AnalogIn
+import simpleio
+
+motor = AnalogOut(board.A1) #motor ouput 
+ptmr = AnalogIn(board.A0) #potentiometer input
+
+while True:
+    print(simpleio.map_range(ptmr.value, 96, 65520, 0, 65535)) #print my potentiometer value
+    motor.value = int(simpleio.map_range(ptmr.value, 96, 65520, 0, 65535)) #push potentiometer value to motor
+    time.sleep(.1) #print delay
+```
+
+### Evidence
+![ezgif-2-1aee011b5e](https://user-images.githubusercontent.com/71402974/200867433-fe2f8763-22c7-4f56-9893-d5aa820d0d79.gif)
+
+
+### Wiring
+ credit for wiring goes to [Nicholas Bednar](https://github.com/nbednar2929/CircuitPython)
+ 
+![moter control](https://user-images.githubusercontent.com/71402974/200862994-083d5501-a44c-46cc-9a53-fe3805c9c849.png)
+
+### Reflection 
+The main peice of advice would be double checking your wiring before you plug in the bateries so you dont fry any transistors or diodes. For the diodes the power flows in the direction of the silver cap. For the transistor, facing the flat side the power flows from left to right.
