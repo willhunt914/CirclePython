@@ -336,4 +336,4 @@ https://user-images.githubusercontent.com/71402974/225631724-82ae58b7-29bc-4873-
 
 
 ### Reflection
-At first this asignment was kind of hard because I tried to use chat gbt for my code and wiring and that did not work good. Then I just looked on coopers document and then 
+At first this asignment was kind of hard because I tried to use chat gbt for my code and wiring and that did not work good. Then I just looked on coopers document and then I figured it out.
