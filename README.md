@@ -282,6 +282,7 @@ The main peice of advice would be double checking your wiring before you plug in
 ## Tempature Sensor 
 The goal of this project is to use a tempature sensor to detect the temp and read it onto an LED screen.
 
+all images and code and videos are from [Cooper M](https://github.com/Cooper-Moreland/EngNotebook3#video)
 ### Code 
 
 ```python
@@ -331,3 +332,8 @@ while True:
 
 https://user-images.githubusercontent.com/71402974/225631724-82ae58b7-29bc-4873-a648-17407a4583d4.mov
 
+![Screenshot 2023-03-14 100722](https://user-images.githubusercontent.com/71402974/225633140-fc2a251c-1eeb-4607-bcae-094a2afb7475.png)
+
+
+### Reflection
+At first this asignment was kind of hard because I tried to use chat gbt for my code and wiring and that did not work good. Then I just looked on coopers document and then 
