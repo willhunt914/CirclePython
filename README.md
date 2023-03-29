@@ -5,8 +5,8 @@ This repository will actually serve as a aid to help you get started with your o
 * [Hello_CircuitPython](#Hello_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_LCD](#CircuitPython_LCD)
-* [Motor_Control](#Motor_Control)
-* 
+* [Motor Control](#Motor_Control)
+* [Tempature Sensor](#Tempature_Sensor)
 ---
 
 ## Hello_CircuitPython
@@ -279,7 +279,7 @@ while True:
 ### Reflection 
 The main peice of advice would be double checking your wiring before you plug in the bateries so you dont fry any transistors or diodes. For the diodes the power flows in the direction of the silver cap. For the transistor, facing the flat side the power flows from left to right.
 
-## Tempature Sensor 
+## Tempature_Sensor 
 The goal of this project is to use a tempature sensor to detect the temp and read it onto an LED screen.
 
 all images and code and videos are from [Cooper M](https://github.com/Cooper-Moreland/EngNotebook3#video)
