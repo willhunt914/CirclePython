@@ -7,6 +7,7 @@ This repository will actually serve as a aid to help you get started with your o
 * [CircuitPython_LCD](#CircuitPython_LCD)
 * [Motor Control](#Motor_Control)
 * [Tempature Sensor](#Tempature_Sensor)
+* [Rotary Encoder](#Rotary_Encoder)
 ---
 
 ## Hello_CircuitPython
