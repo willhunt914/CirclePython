@@ -8,6 +8,8 @@ This repository will actually serve as a aid to help you get started with your o
 * [Motor Control](#Motor_Control)
 * [Tempature Sensor](#Tempature_Sensor)
 * [Rotary Encoder](#Rotary_Encoder)
+* [Photointerrupters](#Photointerrupters)
+
 ---
 
 ## Hello_CircuitPython
@@ -437,3 +439,66 @@ https://user-images.githubusercontent.com/91094422/228268440-82672a8a-6c48-4d38-
 
 ### Reflection
 I think that was the easiest asignment yet. All I did was look at Grants notebook to find the code and wiring. After that, I had some problems making sure rhe wiring was in the right pins but that was the only issue.
+
+
+
+## Photointerrupters
+
+all images and code and videos are from [Graham](https://github.com/VeganPorkChop/Engineering-3-Documentation/tree/master/IntermediateCoding-Engineering%203#CircuitPy_PhotoInterruptors)
+
+### Code
+
+```python
+# SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
+# SPDX-License-Identifier: MIT
+import digitalio
+import simpleio
+import time
+import board
+import adafruit_hcsr04
+import neopixel                       
+from board import *
+
+sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D3, echo_pin=board.D2)
+Kaz = neopixel.NeoPixel(board.NEOPIXEL, 1)#connecting the neopixel on the board to the code
+Kaz.brightness = 0.1 #setting the brightness of the light, from 0-1 brightness
+KazOutput = 0
+Red = 0
+Green = 0
+Blue = 0
+
+while True:
+    try:
+        cm = sonar.distance
+        print((sonar.distance, Red, Green, Blue))
+        time.sleep(0.01)
+        if cm < 5:
+            Blue = 0
+            Green = 0
+            Kaz.fill((255, 0, 0))#setting the color with RGB values
+        elif cm > 5 and cm < 20:
+            Green = 0
+            Red = simpleio.map_range(cm, 5.1, 20, 255, 0)
+            Blue = simpleio.map_range(Red, 0, 255, 255, 0)
+            Kaz.fill((Red, Green, Blue))
+        else:
+            Blue = simpleio.map_range(cm, 20.1, 50, 255, 0)
+            Green = simpleio.map_range(Blue, 0, 255, 255, 0)
+            Kaz.fill((0, Green, Blue))#setting the color with RGB values
+    except RuntimeError:
+        print("Retrying!")
+    time.sleep(0.01)
+  ```
+
+
+### Wiring
+![Screenshot 2022-09-19 154243](https://user-images.githubusercontent.com/71402974/228848997-09ab2855-5741-472a-a040-d73222013ff2.png)
+
+
+### Evidence
+![ezgifgif](https://user-images.githubusercontent.com/71402974/228849025-5d4b6e94-37cb-466f-b966-5221cfa5912d.gif)
+
+
+
+### Reflection 
+This assignment was pretty easy because I had the wiring and code already and I had no problems doing it.
