@@ -444,6 +444,8 @@ I think that was the easiest asignment yet. All I did was look at Grants noteboo
 
 ## Photointerrupters
 
+The goal of this assignment was to wire a photointeruptror to count how many times it senses something.
+
 all images and code and videos are from [Graham](https://github.com/VeganPorkChop/Engineering-3-Documentation/tree/master/IntermediateCoding-Engineering%203#CircuitPy_PhotoInterruptors)
 
 ### Code
