@@ -489,4 +489,4 @@ while True:
 
 
 ### Reflection 
-This assignment was pretty easy because I had the wiring and code already and I had no problems doing it.
+The assignment was kind of hard because I think VS code was down but if it wasnt I think it would have worked hopefully.
