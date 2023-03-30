@@ -451,55 +451,39 @@ all images and code and videos are from [Graham](https://github.com/VeganPorkCho
 ### Code
 
 ```python
-# SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
-# SPDX-License-Identifier: MIT
-import digitalio
-import simpleio
 import time
+import digitalio
 import board
-import adafruit_hcsr04
-import neopixel                       
-from board import *
 
-sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D3, echo_pin=board.D2)
-Kaz = neopixel.NeoPixel(board.NEOPIXEL, 1)#connecting the neopixel on the board to the code
-Kaz.brightness = 0.1 #setting the brightness of the light, from 0-1 brightness
-KazOutput = 0
-Red = 0
-Green = 0
-Blue = 0
+photoI = digitalio.DigitalInOut(board.D7)
+photoI.direction = digitalio.Direction.INPUT
+photoI.pull = digitalio.Pull.UP
+
+last_photoI = True
+last_update = -4
+
+photoICrosses = 0
 
 while True:
-    try:
-        cm = sonar.distance
-        print((sonar.distance, Red, Green, Blue))
-        time.sleep(0.01)
-        if cm < 5:
-            Blue = 0
-            Green = 0
-            Kaz.fill((255, 0, 0))#setting the color with RGB values
-        elif cm > 5 and cm < 20:
-            Green = 0
-            Red = simpleio.map_range(cm, 5.1, 20, 255, 0)
-            Blue = simpleio.map_range(Red, 0, 255, 255, 0)
-            Kaz.fill((Red, Green, Blue))
-        else:
-            Blue = simpleio.map_range(cm, 20.1, 50, 255, 0)
-            Green = simpleio.map_range(Blue, 0, 255, 255, 0)
-            Kaz.fill((0, Green, Blue))#setting the color with RGB values
-    except RuntimeError:
-        print("Retrying!")
-    time.sleep(0.01)
+    if time.monotonic()-last_update > 4:
+        print(f"The number of crosses is {photoICrosses}")
+        last_update = time.monotonic()
+    
+    if last_photoI != photoI.value and not photoI.value:
+        photoICrosses += 1
+    last_photoI = photoI.value
   ```
 
 
 ### Wiring
-![Screenshot 2022-09-19 154243](https://user-images.githubusercontent.com/71402974/228848997-09ab2855-5741-472a-a040-d73222013ff2.png)
 
+
+![68747470733a2f2f726976717565732e6769746875622e696f2f646f63732f70686f746f696e74636972637569742e706e67](https://user-images.githubusercontent.com/71402974/228850843-ee4cb991-6812-452d-be8b-676bb5311a5f.png)
 
 ### Evidence
-![ezgifgif](https://user-images.githubusercontent.com/71402974/228849025-5d4b6e94-37cb-466f-b966-5221cfa5912d.gif)
 
+
+![226713736-399d0f22-aff7-4dd4-8ebb-a26b9d3674bc](https://user-images.githubusercontent.com/71402974/228850874-9381606e-bf01-45f2-9f0d-43ed99e7297c.gif)
 
 
 ### Reflection 
