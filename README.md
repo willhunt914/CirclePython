@@ -65,34 +65,47 @@ I had no real problems with this asignment. It helped me understand how to use c
 The goal of this assignment was to control a servo using 2 buttons 
 
 ```python
-# SPDX-FileCopyrightText: 2018 Kattni Rembor for Adafruit Industries
-#
-# SPDX-License-Identifier: MIT
-
-"""CircuitPython Essentials Servo standard servo example"""
-from curses import BUTTON1_PRESSED
 import time
-from tkinter import Button
 import board
-import pwmio
+from digitalio import DigitalInOut, Direction, Pull
 from adafruit_motor import servo
+import pwmio
 
-# create a PWMOut object on Pin A2.
 pwm = pwmio.PWMOut(board.D2, duty_cycle=2 ** 15, frequency=50)
 
-# Create a servo object, my_servo.
+btn = DigitalInOut(board.D4)
+btn.direction = Direction.INPUT
+btn.pull = Pull.UP
+
+btn2 = DigitalInOut(board.D8)
+btn2.direction = Direction.INPUT
+btn2.pull = Pull.UP
+
 my_servo = servo.Servo(pwm)
+angle = 90j
 
 while True:
-    
-    for angle in range(0, 180, 5):  # 0 - 180 degrees, 5 degrees at a time.
-        my_servo.angle = angle 
-        time.sleep(0.05)
+    if not btn.value:
+        print("BTN is down")
+        for angle in range(0, 180, 5):  # 0 - 180 degrees, 5 degrees at a time
+            my_servo.angle = angle 
+            time.sleep(0.1)
+    else:
+        print("BTN is up")
+        pass
 
+    if not btn2.value:
+        print("BTN2 is down")
+        for angle in range(180, 0, -5):  # 0 - 180 degrees, 5 degrees at a time
+            my_servo.angle = angle 
+            time.sleep(0.1)
+    else:
+        print("BTN2 is up")
+        pass
 
-    for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time.
-        my_servo.angle = angle
-        time.sleep(0.05) 
+    time.sleep(0.1) # sleep for debounce
+
+        
 ```
 
 ### Evidence
