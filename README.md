@@ -452,7 +452,7 @@ https://user-images.githubusercontent.com/91094422/228268440-82672a8a-6c48-4d38-
 ![228265020-5b9756c1-e736-4655-9ca5-9d1b01f2ac95](https://user-images.githubusercontent.com/71402974/228564364-369c240d-178f-416c-ad1b-2ebe87353981.png)
 
 ### Reflection
-I think that was the easiest asignment yet. All I did was look at Grants notebook to find the code and wiring. After that, I had some problems making sure rhe wiring was in the right pins but that was the only issue.
+For this assignment was just making sure that the pins were in the correct place. I had already found the code so the wiring was my only problem.
 
 
 
