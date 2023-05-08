@@ -196,8 +196,7 @@ while True:
 
 ### Reflection
 
-I copied this whole assignment from gaby(thanks) but the only problem I had was I had to move 2 files into my lib folder to get it to work.
-
+The only problem I had was that I had to download and move 2 files and put them into my lib folder.
 
 
 ## Circuitpython_LCD
