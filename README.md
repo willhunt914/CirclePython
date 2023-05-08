@@ -352,8 +352,7 @@ https://user-images.githubusercontent.com/71402974/225631724-82ae58b7-29bc-4873-
 
 
 ### Reflection
-At first this asignment was kind of hard because I tried to use chat gbt for my code and wiring and that did not work good. Then I just looked on coopers document and then I figured it out.
-
+The only problem for this assignment was that I broke my first diode because I put it in the wrong direction then it overheated. After I figured out that was the problem the rest of this assingment was easy.
 
 ## Rotary_Encoder
 
@@ -502,4 +501,4 @@ while True:
 
 
 ### Reflection 
-The assignment was kind of hard because I think VS code was down but if it wasnt I think it would have worked hopefully.
+This assingment was not hard because I already had all the code and the wiring the main thing is I just had to make sure that my wires were in the right pin.
