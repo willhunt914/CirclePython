@@ -501,4 +501,4 @@ while True:
 
 
 ### Reflection 
-This assingnent was not hard because I already had all the code and the wiring the main thing is I just had to make sure that my wires were in the right pin.
+This assignment was not hard because I already had all the code and the wiring the main thing is I just had to make sure that my wires were in the right pin.
