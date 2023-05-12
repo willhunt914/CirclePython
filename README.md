@@ -48,10 +48,7 @@ code  credit goes to [lucy G](https://github.com/lgray52/CircuitPython#evidence)
 ![rainbow light blinking](https://github.com/lgray52/CircuitPython/blob/main/evidence/hello_circuitpython.gif)
 
 image credit goes to [lucy G](https://github.com/lgray52/CircuitPython#evidence)
-### Wiring
-There is no code required for this assignment 
-Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
-Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
+
 
 ### Reflection
 I had no real problems with this asignment. It helped me understand how to use circuitpython and how it worked.
